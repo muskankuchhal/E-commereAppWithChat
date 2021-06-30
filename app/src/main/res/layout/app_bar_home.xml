@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/colorPrimary"
+
+    tools:context=".homeActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@color/colorPrimaryDark">
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            app:titleTextColor="@android:color/white"
+            app:title="HOME"
+           >
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/search_RL"
+        android:elevation="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+       android:layout_below="@+id/app_bar"
+        android:layout_marginTop="-30dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:background="@drawable/input_design"
+        android:layout_centerHorizontal="true">
+
+
+        <EditText
+            android:id="@+id/search_product_name"
+            android:layout_alignParentStart="true"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white"
+            android:hint="Search for product"
+            android:textColorHint="@android:color/black"
+            android:layout_margin="10dp"
+            android:textSize="15dp"
+            android:padding="10dp"
+            />
+
+        <com.rey.material.widget.FloatingActionButton
+            android:id="@+id/search_btn"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/search_product_name"
+            android:scaleType="center"
+            app:fabSize="mini"
+            app:fab_backgroundColor="@color/colorPrimary"
+            app:fab_iconSrc="@drawable/ic_search_black_24dp"
+            app:fab_radius="20dp">
+
+        </com.rey.material.widget.FloatingActionButton>
+
+
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_menu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+       android:layout_above="@id/fab"
+        android:layout_below="@id/search_RL"
+        android:layout_marginTop="5dp"
+        android:scrollbars="vertical"
+        >
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <com.rey.material.widget.FloatingActionButton
+        android:id="@+id/fab"
+        app:fab_backgroundColor="@color/colorPrimaryDark"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+
+        app:fab_iconSrc="@drawable/nav_cart">
+
+    </com.rey.material.widget.FloatingActionButton>
+</RelativeLayout>

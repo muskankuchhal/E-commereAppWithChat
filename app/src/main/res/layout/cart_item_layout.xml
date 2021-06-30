@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="20dp"
+    android:layout_marginLeft="5dp"
+    android:layout_marginRight="5dp"
+    app:cardCornerRadius="15dp"
+    app:cardUseCompatPadding="true"
+    app:cardElevation="3dp">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/cart_image_view"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_margin="10dp"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/tools"
+            android:elevation="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:shapeAppearanceOverlay="@style/roundedSquare"
+            />
+        
+        <TextView
+            android:id="@+id/cart_product_name"
+            android:layout_toRightOf="@id/cart_image_view"
+            android:layout_width="match_parent"
+            android:layout_margin="5dp"
+            android:layout_height="30dp"
+            android:text="Product Name"
+            android:textSize="15sp"
+            android:textStyle="bold"/>
+        <TextView
+            android:id="@+id/cart_product_price"
+            android:layout_below="@+id/cart_product_name"
+            android:layout_toRightOf="@id/cart_image_view"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="Product Name"
+            android:padding="10dp"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:visibility="gone"/>
+        <TextView
+            android:id="@+id/cart_quantity"
+            android:layout_toRightOf="@id/cart_image_view"
+            android:layout_below="@id/cart_product_price"
+            android:layout_margin="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:text="Quantity"
+            android:textSize="10sp"
+            android:textStyle="bold"/>
+
+
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

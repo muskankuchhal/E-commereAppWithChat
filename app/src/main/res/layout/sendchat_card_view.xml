@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/chat_layout"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+ >
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="96dp"
+        app:cardCornerRadius="0.5dp"
+        app:cardPreventCornerOverlap="false">
+    <LinearLayout
+        android:id="@+id/sendchat_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        
+        <TextView
+            android:id="@+id/sendchat_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:maxWidth="250dp"
+            android:textSize="15dp"
+            android:text="This is the messageeeeeeeeesssssssss."/>
+        <TextView
+            android:id="@+id/sendchat_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:maxWidth="250dp"
+            android:textSize="15dp"
+            android:text="10:34"/>
+
+    </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <ImageView
+        android:id="@+id/react"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:elevation="200dp"
+        android:visibility="gone"
+        android:layout_below="@+id/card"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="-10dp"
+        android:layout_marginBottom="4dp"
+        app:srcCompat="@android:drawable/btn_star_big_on" />
+
+</RelativeLayout>
+

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ChatMessageActivity">
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/chat_friend_RL"
+        android:layout_width="427dp"
+        android:layout_height="640dp"/>
+    <EditText
+        android:id="@+id/Edit_text"
+        android:layout_below="@id/chat_friend_RL"
+        android:layout_width="365dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"></EditText>
+    <ImageButton
+        android:id="@+id/send_message_btn"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/chat_friend_RL"
+        android:layout_toRightOf="@+id/Edit_text"
+        android:layout_marginBottom="10dp"
+        android:src="@drawable/ic_send_black_24dp">
+
+    </ImageButton>
+
+
+</RelativeLayout>
